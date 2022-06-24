@@ -13,7 +13,7 @@ const swaggerDocument = require("./swagger.json");
 const customCss = fs.readFileSync(process.cwd() + "/swagger.css", "utf8");
 
 const app = express();
-const port = process.env.PORT || 3080;
+const port = process.env.PORT || 3000;
 
 app.use(express.static(path.join(__dirname, "./ui/build/")));
 
