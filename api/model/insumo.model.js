@@ -23,7 +23,7 @@ module.exports = (sequelize, DataTypes, Model) => {
         // allowNull defaults to true
       },
       quantidade: {
-        type: DataTypes.STRING.DATE,
+        type: DataTypes.STRING,
         allowNull: false
         // allowNull defaults to true
       },
