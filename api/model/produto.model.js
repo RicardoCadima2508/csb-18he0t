@@ -19,7 +19,7 @@ module.exports = (sequelize, DataTypes, Model) => {
         // allowNull defaults to true
       },
       fichaTecnica: {
-        type: DataTypes.insumos //lista de insumos
+        type: DataTypes.STRING //lista de insumos
         // allowNull defaults to true
       },
       quantidade: {
