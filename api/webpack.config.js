@@ -47,7 +47,7 @@ if (environment === "test") {
     "process.env.DIALECT": JSON.stringify("postgres"),
     "process.env.PORT": JSON.stringify("3080"),
     "process.env.PG_CONNECTION_STR": JSON.stringify(
-      "postgres://Duelo@testeproduto:Titans2020@testeproduto.postgres.database.azure.com:5432/tasks"
+      "postgres://duelo@testeproduto:Titans2020@testeproduto.postgres.database.azure.com:5432/tasks"
     )
   };
 }
