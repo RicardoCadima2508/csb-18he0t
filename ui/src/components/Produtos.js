@@ -3,17 +3,17 @@ import EditProdutoModal from "./EditProdutoModal";
 
 export const Produto = ({ produto, deleteProduto, ProdutoEdited }) => {
   console.log("Produto length:::", produto);
-  if (produto.length === 0) return null;
+  if (Produto.length === 0) return null;
 
   const ProdutoRow = (produto, index) => {
     return (
       <tr key={index} className={index % 2 === 0 ? "odd" : "even"}>
-        <td>{produto.id}</td>
-        <td>{produto.nome}</td>
-        <td>{produto.unidade}</td>
+        <td>{Produto.id}</td>
+        <td>{Produto.nome}</td>
+        <td>{Produto.unidade}</td>
         <td>
           <div className="row">
-            <div className="col-md-6">{produto.unidade}</div>
+            <div className="col-md-6">{Produto.unidade}</div>
             <div className="col-md-3">
               <EditProdutoModal
                 produto={produto}
@@ -23,7 +23,7 @@ export const Produto = ({ produto, deleteProduto, ProdutoEdited }) => {
             <div className="col-md-3">
               <button
                 type="button"
-                onClick={(e) => deleteProduto(produto.id)}
+                onClick={(e) => deleteProduto(Produto.id)}
                 className="btn btn-danger right"
               >
                 Delete
@@ -35,7 +35,7 @@ export const Produto = ({ produto, deleteProduto, ProdutoEdited }) => {
     );
   };
 
-  const produtoTable = produto.map((produto, index) =>
+  const produtoTable = Produto.map((produto, index) =>
     ProdutoRow(produto, index)
   );
 
