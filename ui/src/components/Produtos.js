@@ -1,26 +1,29 @@
 import React from "react";
-import EditTaskModal from "./EditTaskModal";
+import EditProdutoModal from "./EditProdutoModal";
 
-export const Tasks = ({ tasks, deleteTask, taskEdited }) => {
-  console.log("tasks length:::", tasks);
-  if (tasks.length === 0) return null;
+export const Produto = ({ produto, deleteProduto, ProdutoEdited }) => {
+  console.log("Produto length:::", produto);
+  if (produto.length === 0) return null;
 
-  const TaskRow = (task, index) => {
+  const ProdutoRow = (produto, index) => {
     return (
       <tr key={index} className={index % 2 === 0 ? "odd" : "even"}>
-        <td>{task.id}</td>
-        <td>{task.task}</td>
-        <td>{task.assignee}</td>
+        <td>{produto.id}</td>
+        <td>{produto.nome}</td>
+        <td>{produto.unidade}</td>
         <td>
           <div className="row">
-            <div className="col-md-6">{task.status}</div>
+            <div className="col-md-6">{produto.unidade}</div>
             <div className="col-md-3">
-              <EditTaskModal task={task} taskEdited={taskEdited} />
+              <EditProdutoModal
+                produto={produto}
+                produtoEdited={ProdutoEdited}
+              />
             </div>
             <div className="col-md-3">
               <button
                 type="button"
-                onClick={(e) => deleteTask(task.id)}
+                onClick={(e) => deleteProduto(produto.id)}
                 className="btn btn-danger right"
               >
                 Delete
@@ -32,21 +35,23 @@ export const Tasks = ({ tasks, deleteTask, taskEdited }) => {
     );
   };
 
-  const taskTable = tasks.map((task, index) => TaskRow(task, index));
+  const produtoTable = produto.map((produto, index) =>
+    ProdutoRow(produto, index)
+  );
 
   return (
     <div className="container">
-      <h2>Tasks</h2>
+      <h2>Produto</h2>
       <table className="table table-bordered">
         <thead>
           <tr>
-            <th>Task Id</th>
-            <th>Task Name</th>
-            <th>Assignee</th>
-            <th>Status</th>
+            <th>Produto Id</th>
+            <th>Produto Name</th>
+            <th>Produto Quantidade</th>
+            <th>Produto Unidade</th>
           </tr>
         </thead>
-        <tbody>{taskTable}</tbody>
+        <tbody>{produtoTable}</tbody>
       </table>
     </div>
   );
