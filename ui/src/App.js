@@ -2,8 +2,9 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import Home from "./components/Home";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home2 from "./components/Home2";
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
