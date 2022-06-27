@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../App.css";
 import Header from "./Header";
-import { Produtos } from "./Produtos";
+import { Produto } from "./Produtos";
 import CreateProduto from "./CreateProduto";
 import {
   getAllProdutos,
@@ -48,11 +48,11 @@ function Home2() {
         </div>
       </div>
       <div className="container mrgnbtm">
-        <Produtos
+        <Produto
           produto={produtos}
           deleteTask={delProduto}
           taskEdited={produtoEdited}
-        ></Produtos>
+        ></Produto>
       </div>
     </div>
   );
