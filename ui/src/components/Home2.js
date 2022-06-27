@@ -49,7 +49,7 @@ function Home2() {
       </div>
       <div className="container mrgnbtm">
         <Produtos
-          produtos={produtos}
+          produto={produtos}
           deleteTask={delProduto}
           taskEdited={produtoEdited}
         ></Produtos>
