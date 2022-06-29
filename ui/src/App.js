@@ -1,6 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
+import Header from "./Header";
 import Home from "./components/Home";
 import Home2 from "./components/Home2";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
@@ -23,9 +24,12 @@ function App() {
 function Layout() {
   return (
     <div>
-      <h1>Welcome to the app!</h1>
+      <div>
+        <Header></Header>
+      </div>
       <nav>
-        <Link to="Home">Home</Link> | <Link to="Home2">Home2</Link>
+        <Link to="Home">Home</Link>
+        <Link to="Home2">Home2</Link>
       </nav>
     </div>
   );
