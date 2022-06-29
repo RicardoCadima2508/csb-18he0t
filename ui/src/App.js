@@ -13,6 +13,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route path="Home" element={<Home />} />
+
             <Route path="Home2" element={<Home2 />} />
           </Route>
         </Routes>
@@ -28,8 +29,12 @@ function Layout() {
         <Header></Header>
       </div>
       <nav>
-        <Link to="Home">Home</Link>
-        <Link to="Home2">Home2</Link>
+        <div>
+          <Link to="Home">Home</Link>
+        </div>
+        <div>
+          <Link to="Home2">Home2</Link>
+        </div>
       </nav>
     </div>
   );
