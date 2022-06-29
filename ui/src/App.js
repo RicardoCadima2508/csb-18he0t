@@ -1,7 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-import Header from "./Header";
+import Header from "./components/Header";
 import Home from "./components/Home";
 import Home2 from "./components/Home2";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
